@@ -1,0 +1,64 @@
+spring:
+  #nacos服务器地址
+  cloud:
+    nacos:
+      #配置中心
+      config:
+        server-addr: 192.168.237.129:8848
+        #群组
+        group: SC_GROUP_C
+        namespace: 500926bd-3541-4fc0-976d-8a36102a7591
+        #文件名 没有配置 默认是 ${spring.application.name}
+        prefix: shop-order-config
+        file-extension: yaml
+        shared-configs[0]:
+          data-id: seata.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        shared-configs[1]:
+          data-id: config.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+      #注册中心
+      discovery:
+        server-addr: 192.168.237.129:8848
+        group: SC_GROUP_S
+        namespace: 500926bd-3541-4fc0-976d-8a36102a7591
+        #service: shop-order-service
+        enabled: true
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+  application:
+    name: shop-order-service
+#fegin
+feign:
+  httpclient:
+    enabled: true
+    connection-timeout: 30000
+    connection-timer-repeat: 30000
+    max-connections: 200
+    max-connections-per-route: 50
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 120000
+#ribbon负载均很
+ribbon:
+  ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）
+  OkToRetryOnAllOperations: true #对超时请求启用重试机制
+  MaxAutoRetriesNextServer: 1 #切换重试实例的最大个数
+  MaxAutoRetries: 1 # 切换实例后重试最大次数
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #修改负载均衡算法
+server:
+  port: 8182
+#seata
+seata:
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+  enabled: true
+  application-id: ${spring.application.name}

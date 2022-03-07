@@ -1,0 +1,37 @@
+server:
+  port: 8180
+
+spring:
+  ##排除数据库自动配置
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  application:
+    name: common
+  datasource:
+    mysql:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.237.129:3306/gt-health?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root
+  main:
+    allow-bean-definition-overriding: true
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  type-aliases-package: com.itheima.shopcommon.entitys
+  ##全局策略配置
+  #global-config:
+  #控制台打印完整SQL
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    #mybatis 日志
+    org.mybatis: DEBUG
+    com.cic.analysis.business.dao: DEBUG
+    #jdbc 日志
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+    #spring 日志
+    root: INFO
+  config: classpath:logback-spring.xml

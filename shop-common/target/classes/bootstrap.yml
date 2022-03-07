@@ -1,0 +1,20 @@
+spring:
+  #nacos服务器地址
+  cloud:
+    nacos:
+      #配置中心
+      config:
+        server-addr: 192.168.237.129:8848
+        #群组
+        group: SC_GROUP_C
+        namespace: 500926bd-3541-4fc0-976d-8a36102a7591
+        #文件名 没有配置 默认是 ${spring.application.name}
+        prefix: shop-common-config
+        file-extension: yaml
+      #注册中心
+      discovery:
+        server-addr: 192.168.237.129:8848
+        group: SC_GROUP_S
+        namespace: 500926bd-3541-4fc0-976d-8a36102a7591
+        #service: shop-common-service
+        enabled: true

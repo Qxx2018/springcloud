@@ -1,0 +1,16 @@
+##gateway-url网关路径配置文件
+sc:
+  gateway:
+    dynamic-route:
+      data-id: 'gateway-router.json'
+      group: 'GATEWAY_C'
+spring:
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  level:
+    #spring 日志
+    root: INFO
+  config: classpath:logback-spring.xml
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sc-gateway-web" />
+        <module name="core-base" />
+        <module name="shop-common" />
+        <module name="core-api" />
+        <module name="auth" />
+        <module name="shop-user" />
+        <module name="shop-order" />
+        <module name="shop-product" />
+        <module name="core-data" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth" target="1.8" />
+      <module name="core-api" target="1.8" />
+      <module name="core-base" target="1.8" />
+      <module name="core-data" target="1.8" />
+      <module name="sc-gateway-web" target="1.8" />
+      <module name="shop-common" target="1.8" />
+      <module name="shop-order" target="1.8" />
+      <module name="shop-product" target="1.8" />
+      <module name="shop-user" target="1.8" />
+      <module name="springcloud-alibada" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

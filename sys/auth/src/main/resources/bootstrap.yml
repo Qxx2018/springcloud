@@ -1,0 +1,51 @@
+server:
+  port: 8200
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: auth-service
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: ${sc.nacos.server-addr}
+        namespace: ${sc.nacos.namespace}
+        group: SC_GROUP_S
+        service: auth-service
+      config:
+        server-addr: ${sc.nacos.server-addr}
+        group: SC_GROUP_C
+        namespace: ${sc.nacos.namespace}
+        prefix: sys-auth-config
+        file-extension: yaml
+        shared-configs[0]:
+          data-id: seata.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        shared-configs[1]:
+          data-id: redis.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        shared-configs[2]:
+          data-id: application.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+  autoconfigure:
+    exclude:
+      ##排除数据库自动配置
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  type-aliases-package: com.itheima.sys.auth.entitys
+seata:
+  tx-service-group: my_test_tx_group
+  service:
+    vgroup-mapping:
+      my_test_tx_group: default
+  enabled: true
+  application-id: ${spring.application.name}

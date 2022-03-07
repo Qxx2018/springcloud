@@ -1,0 +1,33 @@
+sc:
+  nacos:
+    server-addr: 192.168.237.129:8848
+    namespace: 500926bd-3541-4fc0-976d-8a36102a7591
+  datasource:
+    mysql:
+      ip: 192.168.237.129:3306
+      username: root
+      password: root
+      db: sys
+  redis:
+    host: 192.168.237.129
+    port: 6379
+    database: 5
+    password: redisuser
+spring:
+  datasource:
+    mysql:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://${sc.datasource.mysql.ip}/${sc.datasource.mysql.db}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+      username: ${sc.datasource.mysql.username}
+      password: ${sc.datasource.mysql.password}
+logging:
+  level:
+    #mybatis 日志
+    org.mybatis: DEBUG
+    com.cic.analysis.business.dao: DEBUG
+    #jdbc 日志
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+    #spring 日志
+    root: INFO
+  config: classpath:logback-spring.xml
+
