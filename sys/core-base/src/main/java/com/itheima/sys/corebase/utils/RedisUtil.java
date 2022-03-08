@@ -23,6 +23,23 @@ public class RedisUtil<T> {
     private RedisTemplate<String, T> redisTemplate;
 
     /**
+     * 普通缓存存入
+     * @param key
+     * @param value
+     * @return
+     */
+    public Boolean ptSet(String key, T value) {
+        try {
+            redisTemplate.opsForValue().set(key,value);
+            return true;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
      *  HashSet
      * @param key
      * @param map

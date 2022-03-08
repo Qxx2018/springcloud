@@ -1,9 +1,6 @@
 package com.itheima.sys.auth.controller;
 
-import com.itheima.sys.auth.service.SysAccountService;
-import com.itheima.sys.auth.service.SysMenuService;
-import com.itheima.sys.auth.service.SysResourceService;
-import com.itheima.sys.auth.service.SysRoleService;
+import com.itheima.sys.auth.service.*;
 import com.itheima.sys.coredata.dto.request.SysAccountReqDto;
 import com.itheima.sys.coredata.dto.request.SysMenuReqDto;
 import com.itheima.sys.coredata.dto.request.SysResourceReqDto;
@@ -20,7 +17,8 @@ import javax.annotation.Resource;
 @Slf4j
 @RequestMapping("/ssa")
 public class SysAuthController {
-
+    @Resource
+    private SysAuthService sysAuthService;
     @Resource
     private SysMenuService sysMenuService;
     @Resource
@@ -63,6 +61,15 @@ public class SysAuthController {
     @RequestMapping(value = "/role/create", method = RequestMethod.POST)
     public Boolean createRole(@RequestBody SysRoleReqDto dto) {
         sysRoleService.createRole(dto);
+        return Boolean.TRUE;
+    }
+
+    /**
+     * redis存储系统资源权限
+     */
+    @RequestMapping(value = "/authResource/store", method = RequestMethod.POST)
+    public Boolean storeAuthResource() {
+        sysAuthService.storeAuth();
         return Boolean.TRUE;
     }
 
