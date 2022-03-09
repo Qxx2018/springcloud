@@ -23,6 +23,18 @@ public class RedisUtil<T> {
     private RedisTemplate<String, T> redisTemplate;
 
     /**
+     * 普通缓存读取
+     */
+    public T ptGet(String key) {
+        try {
+            return redisTemplate.opsForValue().get(key);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    /**
      * 普通缓存存入
      * @param key
      * @param value

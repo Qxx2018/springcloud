@@ -6,12 +6,10 @@ import com.itheima.sys.coredata.dto.request.SysMenuReqDto;
 import com.itheima.sys.coredata.dto.request.SysResourceReqDto;
 import com.itheima.sys.coredata.dto.request.SysRoleReqDto;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 @RestController
 @Slf4j
@@ -72,6 +70,13 @@ public class SysAuthController {
         sysAuthService.storeAuth();
         return Boolean.TRUE;
     }
-
+    /**
+     * 从redis读取权限资源
+     */
+    @RequestMapping(value = "/authResource/read", method = RequestMethod.GET)
+    public Map<String, String> readAuthResource(@RequestParam(value = "key", required = true) String key) {
+        Map<String, String> maps =  sysAuthService.readAuth(key);
+        return maps;
+    }
 
 }

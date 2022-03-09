@@ -48,4 +48,15 @@ public class SysAuthServiceImpl implements SysAuthService {
         redisUtil.ptSet(AuthConstants.SYSAUTHREDISKEY, maps);
         return Boolean.TRUE;
     }
+
+    /**
+     * 从redis读取权限
+     *
+     * @param key
+     * @return
+     */
+    @Override
+    public Map<String, String> readAuth(String key) {
+        return redisUtil.ptGet(key);
+    }
 }
