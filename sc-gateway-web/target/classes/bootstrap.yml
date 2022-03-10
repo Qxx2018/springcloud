@@ -26,6 +26,9 @@ spring:
         namespace: ${sc.nacos.namespace}
         #service: shop-order-service
         enabled: true
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
     #网关
     gateway:
       discovery:
@@ -63,9 +66,9 @@ server:
   port: 9000
 #seata
 seata:
-  tx-service-group: sc_gateway_web_tx_group
+  tx-service-group: my_test_tx_group
   service:
     vgroup-mapping:
-      sc_gateway_web_tx_group: default
+      my_test_tx_group: default
   enabled: true
   application-id: ${spring.application.name}

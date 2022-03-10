@@ -5,10 +5,12 @@ import com.itheima.sys.coredata.dto.request.SysAccountReqDto;
 import com.itheima.sys.coredata.dto.request.SysMenuReqDto;
 import com.itheima.sys.coredata.dto.request.SysResourceReqDto;
 import com.itheima.sys.coredata.dto.request.SysRoleReqDto;
+import com.itheima.sys.coredata.dto.response.MenuVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -33,6 +35,14 @@ public class SysAuthController {
     public Boolean createMenu(@RequestBody SysMenuReqDto dto) {
         sysMenuService.createMenu(dto);
         return Boolean.TRUE;
+    }
+
+    /**
+     * 菜单管理
+     */
+    @RequestMapping(value = "/menu/display", method = RequestMethod.GET)
+    public List<MenuVo> menuVoList() {
+        return sysMenuService.menuList();
     }
 
     /**
