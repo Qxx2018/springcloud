@@ -26,14 +26,14 @@ public class SysAccountReqDto implements Serializable {
      */
     @NotBlank(message = "登入账号不为空")
     @Length(min = 8, max = 16, message = "长度在8到16位之间")
-    private String accountNumber;
+    private String username;
 
     /**
      * 登入密码
      */
     @NotBlank(message = "登入密码不为空")
     @Length(min = 8, max = 16, message = "密码长度在8到16位之间")
-    private String accountPassword;
+    private String password;
 
     /**
      * 手机号
