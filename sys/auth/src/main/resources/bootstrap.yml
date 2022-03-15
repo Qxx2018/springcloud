@@ -32,6 +32,10 @@ spring:
           data-id: application.yaml
           group: DEFAULT_GROUP
           refresh: true
+        shared-configs[3]:
+          data-id: Jwt.yaml
+          group: DEFAULT_GROUP
+          refresh: true
     alibaba:
       seata:
         tx-service-group: my_test_tx_group

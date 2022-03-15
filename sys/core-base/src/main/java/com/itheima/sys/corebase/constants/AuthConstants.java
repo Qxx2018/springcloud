@@ -24,4 +24,5 @@ public class AuthConstants {
      */
     public static final String ROLE_LOGIN = "LOGIN";
 
+
 }

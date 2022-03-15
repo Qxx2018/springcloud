@@ -8,6 +8,7 @@ import com.itheima.sys.auth.mapper.SysAccountMapper;
 import com.itheima.sys.auth.service.SysAccountService;
 import com.itheima.sys.auth.service.SysResourceService;
 import com.itheima.sys.auth.service.SysRoleService;
+import com.itheima.sys.auth.utils.AuthToolsFunc;
 import com.itheima.sys.corebase.constants.Constants;
 import com.itheima.sys.coredata.dto.request.SysAccountReqDto;
 import com.itheima.sys.coredata.dto.response.ResourceVo;
@@ -51,7 +52,7 @@ public class SysAccountServiceImpl extends ServiceImpl<SysAccountMapper, SysAcco
      */
     @Override
     public Boolean createAccount(SysAccountReqDto dto) {
-        dto.setPassword(new BCryptPasswordEncoder().encode(dto.getPassword()));
+        dto.setPassword(AuthToolsFunc.encodePassword(dto.getPassword()));
         SysAccountEntity sysAccountEntity = new SysAccountEntity();
         BeanUtils.copyProperties(dto, sysAccountEntity, SysAccountEntity.class);
         this.save(sysAccountEntity);
