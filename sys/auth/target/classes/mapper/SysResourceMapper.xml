@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.sys.auth.mapper.SysResourceMapper">
+    <resultMap id="resourceMap" type="com.itheima.sys.auth.entitys.SysResourceEntity">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="resource_name" jdbcType="VARCHAR" property="resourceName"/>
+        <result column="resource_url" jdbcType="VARCHAR" property="resourceUrl"/>
+        <result column="resource_code" jdbcType="VARCHAR" property="resourceCode"/>
+    </resultMap>
+
+    <select id="allResourceByRoleIds" resultMap="resourceMap">
+        SELECT
+        sr.resource_name, sr.resource_url, sr.resource_code
+        FROM sys_role_resource_rel srrr INNER JOIN sys_resource sr ON srrr.resource_id = sr.id
+        WHERE srrr.role_id in
+        <foreach collection="ids" item="roleId" separator="," open="(" close=")">
+            #{roleId}
+        </foreach>
+        AND srrr.deleted = '0' AND sr.deleted = '0'
+    </select>
+
+</mapper>

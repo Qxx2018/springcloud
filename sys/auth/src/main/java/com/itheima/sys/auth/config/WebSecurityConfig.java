@@ -1,8 +1,11 @@
 package com.itheima.sys.auth.config;
 
+import com.itheima.sys.auth.config.customfilter.CustomFilterInvocationSecurityMetadataSource;
+import com.itheima.sys.auth.config.manager.CustomAccessDecisionManager;
 import com.itheima.sys.auth.service.SysAccountService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -10,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 
 import javax.annotation.Resource;
 
@@ -24,7 +28,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Resource
     private SysAccountService sysAccountService;
-
+    @Resource
+    private CustomFilterInvocationSecurityMetadataSource customFilterInvocationSecurityMetadataSource;
+    @Resource
+    private CustomAccessDecisionManager customAccessDecisionManager;
     /**
      * 可以细粒度的配制验证模式和哪些地址对应哪些角色或权限
      * @param http
@@ -32,9 +39,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                //通过FilterInvocationSecurityMetadataSource 动态角色
+                .withObjectPostProcessor(
+                        new ObjectPostProcessor<FilterSecurityInterceptor>() {
+
+                            /**
+                             * Initialize the object possibly returning a modified instance that should be used
+                             * instead.
+                             *
+                             * @param object the object to initialize
+                             * @return the initialized version of the object
+                             */
+                            @Override
+                            public <O extends FilterSecurityInterceptor> O postProcess(O object) {
+                                //自定义 自定义权限拦截  加载访问时所需要的具体资源权限
+                                object.setSecurityMetadataSource(customFilterInvocationSecurityMetadataSource);
+                                //自定义访问决策管理器
+                                object.setAccessDecisionManager(customAccessDecisionManager);
+                                return object;
+                            }
+                        }
+                )
                 //所有接口都需要进行认证才可以访问
                 .antMatchers("/**")
-                    //指定经过身份验证且不被“记住”的用户允许url
+                //指定经过身份验证且不被“记住”的用户允许url
                     .fullyAuthenticated()
                 .and()
                 //认证方式表单形式
@@ -58,19 +86,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     *
+     * @param auth
+     * @throws Exception
+     */
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        //添加二个用户
-//        auth.inMemoryAuthentication()
-//                .withUser("admin")
-//                .password(new BCryptPasswordEncoder().encode("123456")).authorities("admin");
-//        auth.inMemoryAuthentication()
-//                .withUser("common")
-//                .password(new BCryptPasswordEncoder().encode("654321")).authorities("common");
         /**
          * 用户动态认证
+         * loadUserByUsername在登录的时候会触发该方法
          */
-        //loadUserByUsername在登录的时候会触发该方法
         auth.userDetailsService(sysAccountService).passwordEncoder(password());
     }
 

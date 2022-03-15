@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.sys.auth.mapper.SysRoleMapper">
+    <resultMap id="roleMap" type="com.itheima.sys.auth.entitys.SysRoleEntity">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="role_code" jdbcType="VARCHAR" property="roleCode"/>
+        <result column="role_type" jdbcType="VARCHAR" property="roleType"/>
+        <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
+    </resultMap>
+    <select id="allRoleByAccountId" resultMap="roleMap">
+        SELECT
+        sr.id, sr.role_code, sr.role_type, sr.role_name
+        FROM sys_account_role_rel sarr INNER JOIN sys_role sr ON sarr.role_id = sr.id
+        WHERE sarr.account_id = #{accountId} AND sarr.deleted = '0' AND sr.deleted = '0'
+    </select>
+
+</mapper>

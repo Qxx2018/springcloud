@@ -3,10 +3,15 @@ package com.itheima.sys.auth.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.itheima.sys.auth.entitys.SysAccountEntity;
+import com.itheima.sys.auth.entitys.SysResourceEntity;
 import com.itheima.sys.auth.mapper.SysAccountMapper;
 import com.itheima.sys.auth.service.SysAccountService;
+import com.itheima.sys.auth.service.SysResourceService;
+import com.itheima.sys.auth.service.SysRoleService;
 import com.itheima.sys.corebase.constants.Constants;
 import com.itheima.sys.coredata.dto.request.SysAccountReqDto;
+import com.itheima.sys.coredata.dto.response.ResourceVo;
+import com.itheima.sys.coredata.dto.response.RoleVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,6 +26,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * 登入账户服务实现
@@ -32,6 +38,10 @@ public class SysAccountServiceImpl extends ServiceImpl<SysAccountMapper, SysAcco
 
     @Resource
     private SysAccountMapper sysAccountMapper;
+    @Resource
+    private SysRoleService sysRoleService;
+    @Resource
+    private SysResourceService sysResourceService;
 
     /**
      * 创建账户
@@ -72,11 +82,16 @@ public class SysAccountServiceImpl extends ServiceImpl<SysAccountMapper, SysAcco
         if (Objects.isNull(accountEntity)) {
             throw new UsernameNotFoundException("用户不存在");
         }
-        List<GrantedAuthority> auths = new ArrayList<>();
+
         //用户的角色
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ADMIN");
-        auths.add(authority);
+        //查询该登入账户下的角色下的权限资源
+        List<RoleVo> roleVos = sysRoleService.allRoleByAccountId(accountEntity.getId());
+        List<Long> ids = roleVos.stream().map(r -> Long.parseLong(r.getId())).collect(Collectors.toList());
+        List<ResourceVo> resourceVos = sysResourceService.allResourceByRoleIds(ids);
+        List<GrantedAuthority> auths = resourceVos.stream().map(r -> new SimpleGrantedAuthority(r.getResourceCode()))
+                .collect(Collectors.toList());
         accountEntity.setRoles(auths);
+
         return accountEntity;
     }
 }
