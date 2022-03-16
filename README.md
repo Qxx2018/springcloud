@@ -14,3 +14,4 @@
     根据登入的账户生成token
         1、jwt token 数据格式 JwtTokenDo
         2、解析token 获取从token中获取数据 [账户账号密码 角色 资源权限]
+        3、接下来 处理 自定义Token过滤器 JwtAuthenticationFilter
