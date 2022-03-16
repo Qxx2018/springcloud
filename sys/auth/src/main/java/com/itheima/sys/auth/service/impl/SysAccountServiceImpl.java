@@ -2,10 +2,12 @@ package com.itheima.sys.auth.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.itheima.sys.auth.dto.AuthPermissionDo;
 import com.itheima.sys.auth.entitys.SysAccountEntity;
 import com.itheima.sys.auth.entitys.SysResourceEntity;
 import com.itheima.sys.auth.mapper.SysAccountMapper;
 import com.itheima.sys.auth.service.SysAccountService;
+import com.itheima.sys.auth.service.SysAuthService;
 import com.itheima.sys.auth.service.SysResourceService;
 import com.itheima.sys.auth.service.SysRoleService;
 import com.itheima.sys.auth.utils.AuthToolsFunc;
@@ -36,13 +38,8 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 public class SysAccountServiceImpl extends ServiceImpl<SysAccountMapper, SysAccountEntity> implements SysAccountService {
-
     @Resource
-    private SysAccountMapper sysAccountMapper;
-    @Resource
-    private SysRoleService sysRoleService;
-    @Resource
-    private SysResourceService sysResourceService;
+    private SysAuthService sysAuthService;
 
     /**
      * 创建账户
@@ -76,21 +73,15 @@ public class SysAccountServiceImpl extends ServiceImpl<SysAccountMapper, SysAcco
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        LambdaQueryWrapper<SysAccountEntity> wrapper = new LambdaQueryWrapper<SysAccountEntity>()
-                .eq(SysAccountEntity::getUsername,username)
-                .eq(SysAccountEntity::getDeleted, Constants.NOT_DELETE);
-        SysAccountEntity accountEntity = sysAccountMapper.selectOne(wrapper);
-        if (Objects.isNull(accountEntity)) {
-            throw new UsernameNotFoundException("用户不存在");
-        }
+        AuthPermissionDo authPermissionDo = sysAuthService.authPermissionByUserName(username);
 
-        //用户的角色
-        //查询该登入账户下的角色下的权限资源
-        List<RoleVo> roleVos = sysRoleService.allRoleByAccountId(accountEntity.getId());
-        List<Long> ids = roleVos.stream().map(r -> Long.parseLong(r.getId())).collect(Collectors.toList());
-        List<ResourceVo> resourceVos = sysResourceService.allResourceByRoleIds(ids);
+        SysAccountEntity accountEntity = authPermissionDo.getSysAccountEntity();
+
+        List<ResourceVo> resourceVos = authPermissionDo.getResourceVos();
+
         List<GrantedAuthority> auths = resourceVos.stream().map(r -> new SimpleGrantedAuthority(r.getResourceCode()))
                 .collect(Collectors.toList());
+
         accountEntity.setRoles(auths);
 
         return accountEntity;

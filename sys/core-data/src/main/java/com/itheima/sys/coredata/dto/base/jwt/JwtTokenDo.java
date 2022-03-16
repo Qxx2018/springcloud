@@ -1,13 +1,12 @@
-package com.itheima.sys.coredata.dto.base.Jwt;
+package com.itheima.sys.coredata.dto.base.jwt;
 
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Map;
 
 /**
- * jwt token 负载PayLoad
+ * jwt token 数据格式
  * @author 10445
  */
 @Data

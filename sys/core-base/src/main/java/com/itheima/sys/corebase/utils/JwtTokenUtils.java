@@ -2,8 +2,8 @@ package com.itheima.sys.corebase.utils;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.itheima.sys.coredata.dto.base.Jwt.JwtTokenDo;
-import com.itheima.sys.coredata.dto.base.Jwt.PayLoadDo;
+import com.itheima.sys.coredata.dto.base.jwt.JwtTokenDo;
+import com.itheima.sys.coredata.dto.base.jwt.PayLoadDo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;

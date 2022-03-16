@@ -1,4 +1,4 @@
-package com.itheima.sys.coredata.dto.base.Jwt;
+package com.itheima.sys.coredata.dto.base.jwt;
 
 import lombok.Data;
 

@@ -10,3 +10,6 @@
         3、form表单的形式的登录 接再来需要变成JSON形式的
     JWT
         1、配置文件ScJwtConfig  位配置中心 Jwt.yaml
+2022-03-16
+    根据登入的账户生成token
+        1、jwt token 数据格式 JwtTokenDo
