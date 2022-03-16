@@ -3,15 +3,19 @@ package com.itheima.sys.auth.config.customfilter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.itheima.sys.auth.entitys.SysAccountEntity;
+import com.itheima.sys.auth.service.SysAuthService;
 import com.itheima.sys.corebase.utils.JwtTokenUtils;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.servlet.FilterChain;
@@ -33,18 +37,23 @@ import java.util.stream.DoubleStream;
  * 然后Security下面就会去调用UserDetailsService做用户名和密码的正确性验证，
  * 如果用户名密码正确那就是登录成功，就会触发该实现下的successfulAuthentication方法，
  * 否则就是unsuccessfulAuthentication方法，我们可以在相应的方法中编写相应的提示返回给客户端：
+ *
+ * 登录成功后，我们使用Jwt生成了一串Token并返还给用户，以后的所有请求都需要携带该Token
+ *
  * @author 10445
  */
 @Slf4j
 public class LoginAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     /**
-     * jwt token 工具
+     * 权限服务
+     * 这里需要
+     * 用户登入后根据用户账户账号生成jwt-token
      */
-    private JwtTokenUtils jwtTokenUtils;
+    private SysAuthService sysAuthService;
 
-    public LoginAuthenticationFilter(AuthenticationManager authenticationManager, JwtTokenUtils jwtTokenUtils) {
-        this.jwtTokenUtils = jwtTokenUtils;
+    public LoginAuthenticationFilter(AuthenticationManager authenticationManager, SysAuthService sysAuthService) {
+        this.sysAuthService = sysAuthService;
         this.setAuthenticationManager(authenticationManager);
     }
 
@@ -107,10 +116,9 @@ public class LoginAuthenticationFilter extends UsernamePasswordAuthenticationFil
      */
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
-
+        response.setContentType("text/json;charset=utf-8");
         SysAccountEntity user = (SysAccountEntity) authResult.getPrincipal();
-
-
+        response.getWriter().write(sysAuthService.createJwtTokenAfterLogin(user.getUsername()));
 
     }
 
@@ -122,6 +130,14 @@ public class LoginAuthenticationFilter extends UsernamePasswordAuthenticationFil
      */
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
-        super.unsuccessfulAuthentication(request, response, failed);
+        response.setContentType("text/json;charset=utf-8");
+        if (failed instanceof UsernameNotFoundException || failed instanceof BadCredentialsException) {
+            response.getWriter().write("用户名或密码错误！");
+        } else if (failed instanceof DisabledException) {
+            response.getWriter().write("账户被禁用，请联系管理员！");
+        } else {
+            response.getWriter().write("用户名或密码错误！");
+        }
+
     }
 }

@@ -13,3 +13,4 @@
 2022-03-16
     根据登入的账户生成token
         1、jwt token 数据格式 JwtTokenDo
+        2、解析token 获取从token中获取数据 [账户账号密码 角色 资源权限]

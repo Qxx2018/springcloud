@@ -32,7 +32,7 @@ public class AuthTest {
         //设置过期时间
         Calendar cd = Calendar.getInstance();
         cd.setTime(new Date());
-        cd.add(Calendar.DATE, 15);
+        cd.add(Calendar.SECOND, 5);
         Date time = cd.getTime();
         String token =
                 JWT.create()
@@ -51,7 +51,7 @@ public class AuthTest {
      */
     @Test
     public void verify() {
-        String token = "eyJhbGciOiJIUzI1NiIsIlR5cGUiOiJKV1QiLCJ0eXAiOiJKV1QifQ.eyJwYXNzd29yZCI6IjEwNDQ1ODIzNjAiLCJyZXNvdXJjZUNvZGUiOiJzeXM6YWRtaW46bWVudTp2aWV3Iiwicm9sZUNvZGUiOiJBRE1JTiIsImV4cCI6MTY0ODYyNTU1MCwidXNlcm5hbWUiOiIxMDQ0NTgyMzYwIn0.Lc4K2eSbNj1rbxcr7SgEBaUS5bw9Xygyhct4Lyv-Pbs";
+        String token = "eyJhbGciOiJIUzI1NiIsIlR5cGUiOiJKV1QiLCJ0eXAiOiJKV1QifQ.eyJwYXNzd29yZCI6IjEwNDQ1ODIzNjAiLCJyZXNvdXJjZUNvZGUiOlsic3lzOmFkbWluOm1lbnU6dmlldyIsInN5czphZG1pbjptZW51OnZpZXciXSwicm9sZUNvZGUiOlsiQURNSU4iLCJBRE1JTiJdLCJleHAiOjE2NDc0MjI1NDQsInVzZXJuYW1lIjoiMTA0NDU4MjM2MCJ9.MDru-G4D9HAnKsbwQLWg7jpF1vvfXtfDH0tT9XOiYSc";
         try {
             Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
             JWTVerifier verifier = JWT.require(algorithm).build();
@@ -67,10 +67,13 @@ public class AuthTest {
      */
     @Test
     public void getResourceCode() {
-        String toke = "eyJhbGciOiJIUzI1NiIsIlR5cGUiOiJKV1QiLCJ0eXAiOiJKV1QifQ.eyJwYXNzd29yZCI6IjEwNDQ1ODIzNjAiLCJyZXNvdXJjZUNvZGUiOlsic3lzOmFkbWluOm1lbnU6dmlldyIsInN5czphZG1pbjptZW51OnZpZXciXSwicm9sZUNvZGUiOlsiQURNSU4iLCJBRE1JTiJdLCJleHAiOjE2NDg2MjU5OTksInVzZXJuYW1lIjoiMTA0NDU4MjM2MCJ9.uPCTWt8TSxGFbeNAC478jEDx0GlOMUvXh6RETAMNO4U";
+        String toke = "eyJhbGciOiJIUzI1NiIsIlR5cGUiOiJKV1QiLCJ0eXAiOiJKV1QifQ.eyJwYXNzd29yZCI6IiQyYSQxMCR1d3NvdXl6SlZ5YktkTm0wbUJSa0ZPMWFoUG0yYkZ2WUU1REtFT09lUW82QS4wMzNrR0FhLiIsInJlc291cmNlQ29kZSI6WyJzeXM6YWRtaW46bWVudTp2aWV3Il0sInJvbGVDb2RlIjpbIkFETUlOIl0sImV4cCI6MTY0ODcxODk2MSwidXNlcm5hbWUiOiIxMDQ0NTgyMzYwIn0.szcUDdgkTMjxl4SfPQWJ-fWvn3C2mq3Vx4WHpyOxcSk";
         try {
             DecodedJWT jwt = JWT.decode(toke);
-            List<String> a = jwt.getClaim("resourceCode").asList(String.class);
+            List<String> resourceCodeList = jwt.getClaim("resourceCode").asList(String.class);
+            List<String> roleCodeList = jwt.getClaim("roleCode").asList(String.class);
+            String username = jwt.getClaim("username").asString();
+            String password = jwt.getClaim("password").asString();
             System.out.println();
         }
         catch (JWTDecodeException e) {

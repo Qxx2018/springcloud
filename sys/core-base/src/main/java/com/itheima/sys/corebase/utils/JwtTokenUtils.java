@@ -2,6 +2,8 @@ package com.itheima.sys.corebase.utils;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.itheima.sys.coredata.dto.base.jwt.JwtTokenDo;
 import com.itheima.sys.coredata.dto.base.jwt.PayLoadDo;
 import lombok.extern.slf4j.Slf4j;
@@ -64,7 +66,7 @@ public class JwtTokenUtils {
      * @param token 待验证的token
      * @param tokenSecret 加密密钥
      */
-    public Boolean verify(String token, String tokenSecret) {
+    public static Boolean verify(String token, String tokenSecret) {
         try {
             Algorithm algorithm = Algorithm.HMAC256(tokenSecret);
             JWTVerifier verifier = JWT.require(algorithm).build();
@@ -75,5 +77,28 @@ public class JwtTokenUtils {
             log.error("验证token未通过:"+e.toString());
         }
         return Boolean.FALSE;
+    }
+
+    /**
+     * 解析token
+     */
+    public static PayLoadDo analy(String token) {
+        try {
+            DecodedJWT jwt = JWT.decode(token);
+            List<String> resourceCodeList = jwt.getClaim("resourceCode").asList(String.class);
+            List<String> roleCodeList = jwt.getClaim("roleCode").asList(String.class);
+            String username = jwt.getClaim("username").asString();
+            String password = jwt.getClaim("password").asString();
+
+            return PayLoadDo.builder()
+                    .password(password)
+                    .username(username)
+                    .resourceCodeList(resourceCodeList)
+                    .roleCodeList(roleCodeList).build();
+        }
+        catch (JWTDecodeException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

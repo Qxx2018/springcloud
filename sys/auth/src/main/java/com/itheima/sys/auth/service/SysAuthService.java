@@ -36,4 +36,18 @@ public interface SysAuthService {
      * @return
      */
     String createJwtTokenAfterLogin(String username);
+
+    /**
+     * 验证jwt-token
+     * @param token token
+     * @return
+     */
+    Boolean verifyJwtToken(String token);
+
+    /**
+     * 从token中获取数据 [账户账号密码 角色 资源权限]
+     * @param token
+     * @return
+     */
+    AuthPermissionDo analyJwtToken(String token);
 }

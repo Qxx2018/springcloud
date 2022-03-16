@@ -153,4 +153,30 @@ public class SysAuthServiceImpl implements SysAuthService {
         return token;
 
     }
+
+    /**
+     * 验证jwt-token
+     *
+     * @param token       token
+     * @return
+     */
+    @Override
+    public Boolean verifyJwtToken(String token) {
+
+        return JwtTokenUtils.verify(token,scJwtConfig.getTokenSecret());
+
+    }
+
+    /**
+     * 从token中获取数据 [账户账号密码 角色 资源权限]
+     *
+     * @param token
+     * @return
+     */
+    @Override
+    public AuthPermissionDo analyJwtToken(String token) {
+        PayLoadDo payLoadDo = JwtTokenUtils.analy(token);
+        AuthPermissionDo authPermissionDo = this.authPermissionByUserName(payLoadDo.getUsername());
+        return authPermissionDo;
+    }
 }
