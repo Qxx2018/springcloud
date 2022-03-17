@@ -1,4 +1,5 @@
 # springcloud
+github 1044582360@qq.com 密码13WACB845qxx
 2022-03-11
     用户动态认证：
         1、web权限认证配置，再登入时调用loadUserByUsername方法 判断登入用户账户与密码
