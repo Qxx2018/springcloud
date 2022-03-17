@@ -15,3 +15,6 @@
         1、jwt token 数据格式 JwtTokenDo
         2、解析token 获取从token中获取数据 [账户账号密码 角色 资源权限]
         3、接下来 处理 自定义Token过滤器 JwtAuthenticationFilter
+2022-03-16
+    SpringSecurity web 动态认证和动态权限角色 整合JWT使用 Token 认证授权
+    权限认证流程图见【1】

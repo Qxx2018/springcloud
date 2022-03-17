@@ -19,11 +19,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * <p color="red">自定义权限拦截</p>
+ *
  * 自定义：SecurityMetadataSource用于表示对受权限保护的"安全对象"的权限设置信息
  * 通过SecurityMetadataSource来加载访问时所需要的具体资源权限
  *
  * 通过FilterInvocationSecurityMetadataSource
- * 自定义权限拦截
+ *
  * 用户动态授权 及 动态角色权限
  * [
  * 实现FilterInvocationSecurityMetadataSource接口，

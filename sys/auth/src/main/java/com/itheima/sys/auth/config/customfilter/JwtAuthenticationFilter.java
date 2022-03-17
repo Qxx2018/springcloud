@@ -5,6 +5,10 @@ import com.itheima.sys.auth.service.SysAuthService;
 import com.itheima.sys.corebase.utils.JwtTokenUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
@@ -13,9 +17,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * 自定义Token过滤器
+ * <p color="red">自定义Token过滤器</p>
  *
  * 登录成功后，我们使用Jwt生成了一串Token并返还给用户，以后的所有请求都需要携带该Token
  *
@@ -46,7 +52,7 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         response.setContentType("text/json;charset=utf-8");
-
+        //从请求中获取token
         String token = request.getHeader("token");
         //token不存在
         if (StringUtils.isEmpty(token)) {
@@ -62,5 +68,20 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
         }
         //通过token获取账户信息 角色 权限信息
         AuthPermissionDo authPermissionDo = sysAuthService.analyJwtToken(token);
+        List<GrantedAuthority> authorityList = authPermissionDo.getResourceVos().stream().map(
+                r-> new SimpleGrantedAuthority(r.getResourceCode())
+        ).collect(Collectors.toList());
+        try {
+            UsernamePasswordAuthenticationToken authentication =
+                    new UsernamePasswordAuthenticationToken(authPermissionDo.getSysAccountEntity(),null,authorityList);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            request.setAttribute("AuthPermissionDo",authPermissionDo);
+            //全部ok => 携带登入用户的权限对象放行该过滤器
+            chain.doFilter(request, response);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            response.getWriter().write("登入失败");
+        }
     }
 }

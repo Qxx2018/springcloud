@@ -1,8 +1,12 @@
 package com.itheima.sys.auth.config;
 
 import com.itheima.sys.auth.config.customfilter.CustomFilterInvocationSecurityMetadataSource;
+import com.itheima.sys.auth.config.customfilter.JwtAuthenticationFilter;
+import com.itheima.sys.auth.config.customfilter.LoginAuthenticationFilter;
 import com.itheima.sys.auth.config.manager.CustomAccessDecisionManager;
+import com.itheima.sys.auth.handler.AuthenticationAccessDeniedHandler;
 import com.itheima.sys.auth.service.SysAccountService;
+import com.itheima.sys.auth.service.SysAuthService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
@@ -11,6 +15,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
@@ -32,6 +37,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private CustomFilterInvocationSecurityMetadataSource customFilterInvocationSecurityMetadataSource;
     @Resource
     private CustomAccessDecisionManager customAccessDecisionManager;
+    @Resource
+    private AuthenticationAccessDeniedHandler authenticationAccessDeniedHandler;
+    @Resource
+    private SysAuthService authService;
     /**
      * 可以细粒度的配制验证模式和哪些地址对应哪些角色或权限
      * @param http
@@ -67,12 +76,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 //认证方式表单形式
                 .formLogin()
+                .loginProcessingUrl("/login")
                     //任何人都能访问的url
                     .permitAll()
                 .and()
+                .exceptionHandling()
+                .accessDeniedHandler(authenticationAccessDeniedHandler)
+                .and()
+                .addFilter(new JwtAuthenticationFilter(authenticationManager(),authService))
+                .addFilter(new LoginAuthenticationFilter(authenticationManager(),authService))
                 .csrf()
                     //关闭csrf
-                    .disable();
+                    .disable()
+                //无状态session
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
