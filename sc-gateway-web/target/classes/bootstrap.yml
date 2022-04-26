@@ -19,6 +19,10 @@ spring:
           data-id: seata.yaml
           group: DEFAULT_GROUP
           refresh: true
+        shared-configs[1]:
+          data-id: whitelist.yaml
+          group: DEFAULT_GROUP
+          refresh: true
       #注册中心
       discovery:
         server-addr: ${sc.nacos.server-addr}

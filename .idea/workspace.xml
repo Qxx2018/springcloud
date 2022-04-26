@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec9dc766-711b-4d3c-bd83-0b9cd08c6690" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/config/WhiteListConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/handler/AuthManagerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/sc-gateway-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/sc-gateway-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/filter/MyCorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/customfilter/MyCorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/router/DynamicRouteServiceImplByNacos.java" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/src/main/java/com/itheima/gateway/web/router/DynamicRouteServiceImplByNacos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc-gateway-web/target/classes/com/itheima/gateway/web/router/DynamicRouteServiceImplByNacos.class" beforeDir="false" afterPath="$PROJECT_DIR$/sc-gateway-web/target/classes/com/itheima/gateway/web/router/DynamicRouteServiceImplByNacos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/customfilter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/customfilter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/config/customfilter/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/config/customfilter/JwtAuthenticationFilter.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="SpringSecurity---WebFlux" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\job\Maven_package\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../job/Maven_init/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\job\Maven_init\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="28K7Z3fgJb6O1oQYUZzhkPr29zK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.SysAuthApplication">
+    <configuration name="GatewayWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sc-gateway-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.gateway.web.GatewayWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shop-product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.ShopProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shop-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.ShopUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SysAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="auth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.sys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.sys.SysAuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.SysAuthApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec9dc766-711b-4d3c-bd83-0b9cd08c6690" name="Default Changelist" comment="" />
+      <created>1650953476029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650953476029</updated>
+      <workItem from="1650953498005" duration="8960000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/SpringSecurity---WebFlux" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/SpringSecurity---WebFlux" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="345" y="51" width="1382" height="1047" key="DiffContextDialog" timestamp="1650962576019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="345" y="51" width="1382" height="1047" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650962576019" />
+    <state width="1877" height="151" key="GridCell.Tab.0.bottom" timestamp="1650962201287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201287" />
+    <state width="1877" height="151" key="GridCell.Tab.0.center" timestamp="1650962201287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201287" />
+    <state width="1877" height="151" key="GridCell.Tab.0.left" timestamp="1650962201287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201287" />
+    <state width="1877" height="151" key="GridCell.Tab.0.right" timestamp="1650962201287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201287" />
+    <state width="1877" height="151" key="GridCell.Tab.1.bottom" timestamp="1650962201288">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201288" />
+    <state width="1877" height="151" key="GridCell.Tab.1.center" timestamp="1650962201287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201287" />
+    <state width="1877" height="151" key="GridCell.Tab.1.left" timestamp="1650962201287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201287" />
+    <state width="1877" height="151" key="GridCell.Tab.1.right" timestamp="1650962201288">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201288" />
+    <state width="1877" height="151" key="GridCell.Tab.2.bottom" timestamp="1650962201289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201289" />
+    <state width="1877" height="151" key="GridCell.Tab.2.center" timestamp="1650962201289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201289" />
+    <state width="1877" height="151" key="GridCell.Tab.2.left" timestamp="1650962201288">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201288" />
+    <state width="1877" height="151" key="GridCell.Tab.2.right" timestamp="1650962201289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="151" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650962201289" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1650955221988">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1650955221988" />
+    <state x="181" y="255" width="714" height="594" key="find.popup" timestamp="1650960949528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="181" y="255" width="714" height="594" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650960949528" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/customfilter/LoginAuthenticationFilter.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

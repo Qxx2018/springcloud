@@ -1,12 +1,12 @@
 package com.itheima.gateway.web.router;
 
-import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.nacos.api.NacosFactory;
 import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.config.listener.Listener;
 import com.alibaba.nacos.api.exception.NacosException;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.context.annotation.DependsOn;
@@ -117,7 +117,7 @@ public class DynamicRouteServiceImplByNacos {
                     DynamicRouteConfig.NACOS_ROUTE_DATA_ID,
                     DynamicRouteConfig.NACOS_ROUTE_GROUP,
                     DynamicRouteConfig.DEFAULT_TIMEOUT);
-            if (StrUtil.isNotBlank(content)) {
+            if (Strings.isNotBlank(content)) {
                 definitions = JSON.parseArray(content,RouteDefinition.class);
             }
             return definitions;

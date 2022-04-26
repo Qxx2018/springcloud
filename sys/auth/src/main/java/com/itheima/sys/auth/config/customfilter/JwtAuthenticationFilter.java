@@ -56,14 +56,14 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
         String token = request.getHeader("token");
         //token不存在
         if (StringUtils.isEmpty(token)) {
-            response.getWriter().write("登入失败");
+            response.getWriter().write("token不存在");
             return;
         }
         //验证token
         boolean isold = sysAuthService.verifyJwtToken(token);
         if (!isold) {
             //验证失败
-            response.getWriter().write("登入失败");
+            response.getWriter().write("token验证失败");
             return;
         }
         //通过token获取账户信息 角色 权限信息
@@ -81,7 +81,7 @@ public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
         }
         catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().write("登入失败");
+            response.getWriter().write("token验证失败:"+e.getMessage());
         }
     }
 }

@@ -1,0 +1,874 @@
+2022-04-26 13:44:42.158 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 13:44:43.760 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 13:44:43.828 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 13:44:43.888 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 13:44:43.942 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 13:44:48.021 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 13:44:48.029 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 13:44:48.072 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2022-04-26 13:44:48.600 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=312c4ea7-b116-3fba-abdb-0011338700b8
+2022-04-26 13:44:48.859 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$11c73362] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:48.877 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:48.943 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:48.955 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:48.958 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:48.959 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 13:44:49.060 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 13:44:49.074 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.093 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.107 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 13:44:49.344 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 13:44:49.348 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 13:44:49.459 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 13:44:49.460 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 13:44:49.577 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 13:44:49.578 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 13:44:49.578 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 13:44:49.723 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.itheima.sys.corebase.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$5c11fbc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.772 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.776 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.804 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.807 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:49.865 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:44:50.399 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-04-26 13:44:50.418 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-04-26 13:44:50.419 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-26 13:44:50.419 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-04-26 13:44:50.423 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.28] using APR version [1.7.0].
+2022-04-26 13:44:50.423 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-04-26 13:44:50.424 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-04-26 13:44:50.432 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-04-26 13:44:50.831 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-26 13:44:50.831 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6844 ms
+2022-04-26 13:45:01.687 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 13:45:01.696 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 13:45:01.857 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 13:45:01.858 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 13:45:03.668 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 13:45:03.672 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 13:45:06.592 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 13:45:06.606 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 13:45:11.282 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-04-26 13:45:11.325 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-26 13:53:21.126 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 13:53:21.259 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 13:53:21.356 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 13:53:21.435 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 13:53:21.514 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 13:53:23.414 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 13:53:23.419 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 13:53:23.460 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2022-04-26 13:53:24.007 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=312c4ea7-b116-3fba-abdb-0011338700b8
+2022-04-26 13:53:24.249 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$f8fcf639] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.275 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.348 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.362 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.365 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.367 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 13:53:24.449 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 13:53:24.463 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.481 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:24.499 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 13:53:24.745 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 13:53:24.747 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 13:53:24.845 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 13:53:24.846 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 13:53:24.936 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 13:53:24.937 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 13:53:24.937 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 13:53:25.172 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.itheima.sys.corebase.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$4347be97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:25.217 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:25.221 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:25.248 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:25.251 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:25.255 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 13:53:25.815 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-04-26 13:53:25.839 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-04-26 13:53:25.840 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-26 13:53:25.840 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-04-26 13:53:25.843 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.28] using APR version [1.7.0].
+2022-04-26 13:53:25.844 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-04-26 13:53:25.844 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-04-26 13:53:25.852 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-04-26 13:53:26.269 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-26 13:53:26.270 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4705 ms
+2022-04-26 13:53:32.806 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 13:53:32.817 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 13:53:33.016 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 13:53:33.016 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 13:53:33.234 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 13:53:33.239 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 13:53:36.301 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 13:53:36.309 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 13:53:41.174 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-04-26 13:53:41.239 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-26 14:13:53.543 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 14:13:53.626 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 14:13:53.701 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 14:13:53.774 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 14:13:53.843 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 14:13:55.599 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 14:13:55.606 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 14:13:55.657 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2022-04-26 14:13:56.203 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=312c4ea7-b116-3fba-abdb-0011338700b8
+2022-04-26 14:13:56.463 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$e3352151] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.483 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.548 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.559 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.562 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.563 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 14:13:56.645 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 14:13:56.656 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.676 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:56.693 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 14:13:57.022 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 14:13:57.025 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 14:13:57.071 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 14:13:57.073 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 14:13:57.210 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 14:13:57.211 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 14:13:57.211 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 14:13:57.540 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.itheima.sys.corebase.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$2d7fe9af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:57.600 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:57.607 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:57.644 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:57.649 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:57.653 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:13:58.261 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-04-26 14:13:58.281 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-04-26 14:13:58.282 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-26 14:13:58.283 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-04-26 14:13:58.286 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.28] using APR version [1.7.0].
+2022-04-26 14:13:58.286 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-04-26 14:13:58.287 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-04-26 14:13:58.294 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-04-26 14:13:58.702 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-26 14:13:58.703 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4819 ms
+2022-04-26 14:14:03.786 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 14:14:03.796 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 14:14:03.924 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 14:14:03.925 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 14:14:04.079 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 14:14:04.086 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 14:14:07.295 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 14:14:07.303 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 14:14:11.738 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-04-26 14:14:11.779 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-26 14:41:27.452 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 14:41:27.535 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 14:41:27.608 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 14:41:27.653 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 14:41:27.716 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 14:41:29.170 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 14:41:29.174 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 14:41:29.210 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2022-04-26 14:41:29.764 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=54dfe81c-16c1-3c0d-a91a-571dbced08ec
+2022-04-26 14:41:29.992 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$e379916d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.012 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.067 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.078 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.081 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.083 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 14:41:30.167 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 14:41:30.177 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.194 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.211 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 14:41:30.544 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 14:41:30.547 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 14:41:30.588 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 14:41:30.589 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 14:41:30.735 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 14:41:30.736 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 14:41:30.736 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 14:41:30.923 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.itheima.sys.corebase.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$2dc459cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.965 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.969 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.995 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:30.997 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:31.000 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 14:41:31.560 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-04-26 14:41:31.578 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-04-26 14:41:31.579 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-26 14:41:31.579 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-04-26 14:41:31.583 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.28] using APR version [1.7.0].
+2022-04-26 14:41:31.583 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-04-26 14:41:31.583 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-04-26 14:41:31.591 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-04-26 14:41:31.982 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-26 14:41:31.982 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4235 ms
+2022-04-26 14:41:37.545 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 14:41:37.556 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 14:41:37.767 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 14:41:37.767 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 14:41:37.928 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 14:41:37.933 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 14:41:41.002 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 14:41:41.011 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 14:41:45.904 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-04-26 14:41:45.953 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-26 15:01:43.677 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 15:01:43.787 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 15:01:43.861 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 15:01:43.910 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 15:01:43.972 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 15:01:45.504 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 15:01:45.507 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 15:01:45.558 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2022-04-26 15:01:46.039 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=54dfe81c-16c1-3c0d-a91a-571dbced08ec
+2022-04-26 15:01:46.273 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$55c98944] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.293 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.369 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.382 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.386 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.387 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 15:01:46.479 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 15:01:46.491 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.508 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:46.524 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 15:01:46.907 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 15:01:46.909 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 15:01:46.946 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 15:01:46.948 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 15:01:47.103 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 15:01:47.104 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 15:01:47.104 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 15:01:47.250 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.itheima.sys.corebase.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$a01451a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:47.287 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:47.291 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:47.314 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:47.317 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:47.319 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:01:47.876 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2022-04-26 15:01:47.896 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2022-04-26 15:01:47.898 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-04-26 15:01:47.898 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-04-26 15:01:47.903 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.28] using APR version [1.7.0].
+2022-04-26 15:01:47.904 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-04-26 15:01:47.904 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-04-26 15:01:47.912 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2022-04-26 15:01:48.316 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-04-26 15:01:48.317 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4298 ms
+2022-04-26 15:01:53.260 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 15:01:53.267 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 15:01:53.397 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 15:01:53.398 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 15:01:53.533 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:01:53.538 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 15:01:56.084 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 15:01:56.092 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 15:02:00.306 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-04-26 15:02:00.354 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-26 15:15:03.163 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 15:15:03.243 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 15:15:03.301 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 15:15:03.353 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 15:15:03.405 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 15:15:04.843 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 15:15:04.847 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 15:15:04.883 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2022-04-26 15:15:05.333 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=95ad92e2-916d-390b-aad3-66c4789e742f
+2022-04-26 15:15:05.532 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$61a8dda7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.554 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.613 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.625 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.628 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.629 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 15:15:05.740 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 15:15:05.752 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.770 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:05.783 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 15:15:06.011 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 15:15:06.014 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 15:15:06.117 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 15:15:06.118 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 15:15:06.203 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 15:15:06.203 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 15:15:06.203 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 15:15:06.351 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.itheima.sys.corebase.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$abf3a605] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:06.388 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:06.392 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:06.404 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:06.408 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:06.412 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:15:11.560 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 15:15:11.568 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 15:15:11.694 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 15:15:11.695 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 15:15:11.922 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: bc1528a0-b55c-4ae1-b6bb-c6569db12ad6
+
+2022-04-26 15:15:12.949 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2022-04-26 15:15:12.949 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2022-04-26 15:15:12.949 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2022-04-26 15:15:12.950 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2022-04-26 15:15:12.950 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2022-04-26 15:15:12.950 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2022-04-26 15:15:12.950 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2022-04-26 15:15:12.951 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2022-04-26 15:15:12.951 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2022-04-26 15:15:12.951 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2022-04-26 15:15:12.951 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2022-04-26 15:15:12.951 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2022-04-26 15:15:12.951 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2022-04-26 15:15:13.133 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 15:15:13.134 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+2022-04-26 15:15:13.136 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 15:15:13.466 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-order-api', predicates=[PredicateDefinition{name='Path', args={pattern=/so/**}}], filters=[], uri=lb://shop-order-service, order=0, metadata={}}
+2022-04-26 15:15:13.466 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-order-api', predicates=[PredicateDefinition{name='Path', args={pattern=/so/**}}], filters=[], uri=lb://shop-order-service, order=0, metadata={}}
+2022-04-26 15:15:13.482 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='sys-auth-api', predicates=[PredicateDefinition{name='Path', args={pattern=/ssa/**}}], filters=[], uri=lb://auth-service, order=0, metadata={}}
+2022-04-26 15:15:13.483 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='sys-auth-api', predicates=[PredicateDefinition{name='Path', args={pattern=/ssa/**}}], filters=[], uri=lb://auth-service, order=0, metadata={}}
+2022-04-26 15:15:13.501 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:15:13.504 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 15:15:16.215 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 15:15:16.223 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 15:15:20.659 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-04-26 15:15:20.790 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-26 15:28:38.700 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 15:28:38.777 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 15:28:38.842 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 15:28:38.889 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 15:28:38.943 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 15:28:40.044 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 15:28:40.049 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 15:28:40.094 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2022-04-26 15:28:40.427 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=93299d0d-be49-3ed6-ab3c-7b8ddabd8772
+2022-04-26 15:28:40.549 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$57787ed4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.566 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.691 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.703 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.706 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.708 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 15:28:40.787 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 15:28:40.798 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.813 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:40.828 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 15:28:41.111 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 15:28:41.113 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 15:28:41.191 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 15:28:41.192 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 15:28:41.296 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 15:28:41.297 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 15:28:41.298 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 15:28:41.370 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:41.387 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:41.392 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:41.394 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:41.404 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 15:28:46.713 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 15:28:46.721 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 15:28:46.851 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 15:28:46.851 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 15:28:47.000 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0165ea70-dd73-4373-b1d2-c9d495b63081
+
+2022-04-26 15:28:47.701 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2022-04-26 15:28:47.701 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2022-04-26 15:28:47.701 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2022-04-26 15:28:47.702 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2022-04-26 15:28:47.703 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2022-04-26 15:28:47.703 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2022-04-26 15:28:47.817 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 15:28:47.818 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+2022-04-26 15:28:47.819 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 15:28:48.018 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-order-api', predicates=[PredicateDefinition{name='Path', args={pattern=/so/**}}], filters=[], uri=lb://shop-order-service, order=0, metadata={}}
+2022-04-26 15:28:48.018 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-order-api', predicates=[PredicateDefinition{name='Path', args={pattern=/so/**}}], filters=[], uri=lb://shop-order-service, order=0, metadata={}}
+2022-04-26 15:28:48.030 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='sys-auth-api', predicates=[PredicateDefinition{name='Path', args={pattern=/ssa/**}}], filters=[], uri=lb://auth-service, order=0, metadata={}}
+2022-04-26 15:28:48.031 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='sys-auth-api', predicates=[PredicateDefinition{name='Path', args={pattern=/ssa/**}}], filters=[], uri=lb://auth-service, order=0, metadata={}}
+2022-04-26 15:28:48.047 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:28:48.051 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 15:28:48.136 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 15:28:48.143 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 15:28:52.417 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-04-26 15:28:59.163 [main] INFO  o.s.boot.web.embedded.netty.NettyWebServer - Netty started on port(s): 9000
+2022-04-26 15:29:03.686 [main] INFO  com.alibaba.nacos.client.naming - [BEAT] adding beat: BeatInfo{port=9000, ip='192.168.237.1', weight=1.0, serviceName='SC_GROUP_S@@sc-gateway-web-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-04-26 15:29:03.687 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] 500926bd-3541-4fc0-976d-8a36102a7591 registering service SC_GROUP_S@@sc-gateway-web-service with instance: Instance{instanceId='null', ip='192.168.237.1', port=9000, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-04-26 15:29:03.712 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, SC_GROUP_S sc-gateway-web-service 192.168.237.1:9000 register finished
+2022-04-26 15:29:03.964 [main] INFO  com.alibaba.nacos.client.naming - new ips(1) service: SC_GROUP_S@@sc-gateway-web-service -> [{"instanceId":"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service","ip":"192.168.237.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@sc-gateway-web-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-04-26 15:29:03.974 [main] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: SC_GROUP_S@@sc-gateway-web-service -> [{"instanceId":"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service","ip":"192.168.237.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@sc-gateway-web-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000}]
+2022-04-26 15:29:04.014 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - Started GatewayWebApplication in 32.678 seconds (JVM running for 36.658)
+2022-04-26 15:29:04.019 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] sc-gateway-config-dev.yaml+SC_GROUP_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:29:04.019 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=sc-gateway-config-dev.yaml, group=SC_GROUP_C, cnt=1
+2022-04-26 15:29:04.020 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] sc-gateway-config+SC_GROUP_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:29:04.020 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=sc-gateway-config, group=SC_GROUP_C, cnt=1
+2022-04-26 15:29:04.021 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] sc-gateway-config.yaml+SC_GROUP_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:29:04.021 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=sc-gateway-config.yaml, group=SC_GROUP_C, cnt=1
+2022-04-26 15:29:04.023 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] seata.yaml+DEFAULT_GROUP+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:29:04.024 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=seata.yaml, group=DEFAULT_GROUP, cnt=1
+2022-04-26 15:29:04.025 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] whitelist.yaml+DEFAULT_GROUP+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 15:29:04.026 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=whitelist.yaml, group=DEFAULT_GROUP, cnt=1
+2022-04-26 15:29:04.786 [com.alibaba.nacos.naming.push.receiver] INFO  com.alibaba.nacos.client.naming - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.237.1\",\"port\":9000,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"SC_GROUP_S@@sc-gateway-web-service\",\"ephemeral\":true}],\"dom\":\"SC_GROUP_S@@sc-gateway-web-service\",\"name\":\"SC_GROUP_S@@sc-gateway-web-service\",\"cacheMillis\":10000,\"lastRefTime\":1650958144718,\"checksum\":\"04b83f1171dc76d29f511f8bd76346b7\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":16720905557713} from /192.168.237.129
+2022-04-26 15:29:41.157 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 15:29:41.157 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+2022-04-26 15:29:41.157 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 15:29:41.166 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - new ips(1) service: DEFAULT_GROUP@@seata-server@@default -> [{"instanceId":"192.168.237.129#8091#default#DEFAULT_GROUP@@seata-server","ip":"192.168.237.129","port":8091,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"default","serviceName":"DEFAULT_GROUP@@seata-server","metadata":{},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"instanceIdGenerator":"simple"}]
+2022-04-26 15:29:41.168 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: DEFAULT_GROUP@@seata-server@@default -> [{"instanceId":"192.168.237.129#8091#default#DEFAULT_GROUP@@seata-server","ip":"192.168.237.129","port":8091,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"default","serviceName":"DEFAULT_GROUP@@seata-server","metadata":{},"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"instanceIdGenerator":"simple"}]
+2022-04-26 15:29:41.171 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - [LISTENER] adding DEFAULT_GROUP@@seata-server with default to listener map
+2022-04-26 15:29:41.174 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.NettyClientChannelManager - will connect to 192.168.237.129:8091
+2022-04-26 15:29:41.180 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - NettyPool create channel to transactionRole:TMROLE,address:192.168.237.129:8091,msg:< RegisterTMRequest{applicationId='sc-gateway-web-service', transactionServiceGroup='my_test_tx_group'} >
+2022-04-26 15:29:41.356 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.NettyClientChannelManager - will connect to 192.168.237.129:8091
+2022-04-26 15:29:41.358 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - NettyPool create channel to transactionRole:RMROLE,address:192.168.237.129:8091,msg:< RegisterRMRequest{resourceIds='null', applicationId='sc-gateway-web-service', transactionServiceGroup='my_test_tx_group'} >
+2022-04-26 15:29:41.439 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.TmRpcClient - register TM success. server version:1.2.0,channel:[id: 0x749ae5c6, L:/192.168.237.1:54673 - R:/192.168.237.129:8091]
+2022-04-26 15:29:41.439 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.RmRpcClient - register RM success. server version:1.2.0,channel:[id: 0x466988eb, L:/192.168.237.1:54674 - R:/192.168.237.129:8091]
+2022-04-26 15:29:41.457 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - register success, cost 188 ms, version:1.2.0,role:TMROLE,channel:[id: 0x749ae5c6, L:/192.168.237.1:54673 - R:/192.168.237.129:8091]
+2022-04-26 15:29:41.457 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - register success, cost 87 ms, version:1.2.0,role:RMROLE,channel:[id: 0x466988eb, L:/192.168.237.1:54674 - R:/192.168.237.129:8091]
+2022-04-26 15:31:27.399 [SpringContextShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-04-26 15:31:27.400 [SpringContextShutdownHook] INFO  com.alibaba.nacos.client.naming - [BEAT] removing beat: SC_GROUP_S@@sc-gateway-web-service:192.168.237.1:9000 from beat map.
+2022-04-26 15:31:27.400 [SpringContextShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] 500926bd-3541-4fc0-976d-8a36102a7591 deregistering service SC_GROUP_S@@sc-gateway-web-service with instance: Instance{instanceId='null', ip='192.168.237.1', port=9000, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-04-26 15:31:27.404 [SpringContextShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-04-26 16:24:55.215 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\10445\nacos\config
+2022-04-26 16:24:55.309 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2022-04-26 16:24:55.373 [main] INFO  com.alibaba.nacos.client.config.utils.JvmUtil - isMultiInstance:false
+2022-04-26 16:24:55.432 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config-dev.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config.yaml,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-sc-gateway-config,SC_GROUP_C'}, BootstrapPropertySource {name='bootstrapProperties-whitelist.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-seata.yaml,DEFAULT_GROUP'}]
+2022-04-26 16:24:55.494 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - The following profiles are active: dev
+2022-04-26 16:24:57.033 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-26 16:24:57.038 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-26 16:24:57.083 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2022-04-26 16:24:57.424 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=93299d0d-be49-3ed6-ab3c-7b8ddabd8772
+2022-04-26 16:24:57.553 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$74403e13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.571 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.626 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.638 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.640 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seata-io.seata.spring.boot.autoconfigure.properties.SeataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.642 [main] INFO  i.s.s.boot.autoconfigure.SeataAutoConfiguration - Automatically configure Seata
+2022-04-26 16:24:57.720 [main] INFO  io.seata.config.ConfigurationFactory - load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-04-26 16:24:57.731 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.747 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:57.761 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Initializing Global Transaction Clients ... 
+2022-04-26 16:24:57.997 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 16:24:58.000 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Transaction Manager Client is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 16:24:58.092 [main] INFO  io.seata.rm.datasource.AsyncWorker - Async Commit Buffer Limit: 10000
+2022-04-26 16:24:58.094 [main] INFO  io.seata.rm.datasource.xa.ResourceManagerXA - ResourceManagerXA init ...
+2022-04-26 16:24:58.182 [main] INFO  io.seata.core.rpc.netty.AbstractRpcRemotingClient - RpcClientBootstrap has started
+2022-04-26 16:24:58.183 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Resource Manager is initialized. applicationId[sc-gateway-web-service] txServiceGroup[my_test_tx_group]
+2022-04-26 16:24:58.183 [main] INFO  i.seata.spring.annotation.GlobalTransactionScanner - Global Transaction Clients are initialized. 
+2022-04-26 16:24:58.258 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:58.281 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:58.289 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:58.292 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:24:58.302 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-26 16:25:03.749 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - gateway route init...
+2022-04-26 16:25:03.757 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - 获取网关当前配置:
+[
+    {
+        "id": "shop-user-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/su/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-user-service"
+    },
+    {
+        "id":"shop-order-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/so/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://shop-order-service"
+    },
+    {
+        "id":"sys-auth-api",
+        "order": 0,
+        "predicates": [
+            {
+                "args": {
+                    "pattern": "/ssa/**"
+                },
+                "name": "Path"
+            }
+        ],
+        "uri": "lb://auth-service"
+    }
+]
+2022-04-26 16:25:03.892 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 16:25:03.892 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-user-api', predicates=[PredicateDefinition{name='Path', args={pattern=/su/**}}], filters=[], uri=lb://shop-user-service, order=0, metadata={}}
+2022-04-26 16:25:04.042 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0bf01087-2fe1-4c9e-ac1a-af5e005690d9
+
+2022-04-26 16:25:04.724 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2022-04-26 16:25:04.725 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2022-04-26 16:25:04.725 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2022-04-26 16:25:04.725 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2022-04-26 16:25:04.726 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2022-04-26 16:25:04.727 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2022-04-26 16:25:04.727 [main] INFO  o.s.c.gateway.route.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2022-04-26 16:25:04.862 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 16:25:04.863 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+2022-04-26 16:25:04.864 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 16:25:05.083 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='shop-order-api', predicates=[PredicateDefinition{name='Path', args={pattern=/so/**}}], filters=[], uri=lb://shop-order-service, order=0, metadata={}}
+2022-04-26 16:25:05.083 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='shop-order-api', predicates=[PredicateDefinition{name='Path', args={pattern=/so/**}}], filters=[], uri=lb://shop-order-service, order=0, metadata={}}
+2022-04-26 16:25:05.107 [main] INFO  c.i.g.web.router.DynamicRouteServiceImplByNacos - update route : RouteDefinition{id='sys-auth-api', predicates=[PredicateDefinition{name='Path', args={pattern=/ssa/**}}], filters=[], uri=lb://auth-service, order=0, metadata={}}
+2022-04-26 16:25:05.107 [main] INFO  c.i.gateway.web.router.DynamicRouteServiceImpl - gateway add route RouteDefinition{id='sys-auth-api', predicates=[PredicateDefinition{name='Path', args={pattern=/ssa/**}}], filters=[], uri=lb://auth-service, order=0, metadata={}}
+2022-04-26 16:25:05.123 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] gateway-router.json+GATEWAY_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 16:25:05.128 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=gateway-router.json, group=GATEWAY_C, cnt=1
+2022-04-26 16:25:05.216 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 16:25:05.225 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-26 16:25:09.721 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2022-04-26 16:25:16.470 [main] INFO  o.s.boot.web.embedded.netty.NettyWebServer - Netty started on port(s): 9000
+2022-04-26 16:25:21.276 [main] INFO  com.alibaba.nacos.client.naming - [BEAT] adding beat: BeatInfo{port=9000, ip='192.168.237.1', weight=1.0, serviceName='SC_GROUP_S@@sc-gateway-web-service', cluster='DEFAULT', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-04-26 16:25:21.278 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] 500926bd-3541-4fc0-976d-8a36102a7591 registering service SC_GROUP_S@@sc-gateway-web-service with instance: Instance{instanceId='null', ip='192.168.237.1', port=9000, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-04-26 16:25:21.295 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, SC_GROUP_S sc-gateway-web-service 192.168.237.1:9000 register finished
+2022-04-26 16:25:21.413 [main] INFO  com.alibaba.nacos.client.naming - new ips(1) service: SC_GROUP_S@@sc-gateway-web-service -> [{"instanceId":"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service","ip":"192.168.237.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@sc-gateway-web-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:25:21.422 [main] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: SC_GROUP_S@@sc-gateway-web-service -> [{"instanceId":"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service","ip":"192.168.237.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@sc-gateway-web-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:25:21.462 [main] INFO  com.itheima.gateway.web.GatewayWebApplication - Started GatewayWebApplication in 33.984 seconds (JVM running for 38.12)
+2022-04-26 16:25:21.467 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] sc-gateway-config-dev.yaml+SC_GROUP_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 16:25:21.467 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=sc-gateway-config-dev.yaml, group=SC_GROUP_C, cnt=1
+2022-04-26 16:25:21.468 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] sc-gateway-config+SC_GROUP_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 16:25:21.468 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=sc-gateway-config, group=SC_GROUP_C, cnt=1
+2022-04-26 16:25:21.468 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] sc-gateway-config.yaml+SC_GROUP_C+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 16:25:21.469 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=sc-gateway-config.yaml, group=SC_GROUP_C, cnt=1
+2022-04-26 16:25:21.470 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] seata.yaml+DEFAULT_GROUP+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 16:25:21.471 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=seata.yaml, group=DEFAULT_GROUP, cnt=1
+2022-04-26 16:25:21.473 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [subscribe] whitelist.yaml+DEFAULT_GROUP+500926bd-3541-4fc0-976d-8a36102a7591
+2022-04-26 16:25:21.474 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-192.168.237.129_8848-500926bd-3541-4fc0-976d-8a36102a7591] [add-listener] ok, tenant=500926bd-3541-4fc0-976d-8a36102a7591, dataId=whitelist.yaml, group=DEFAULT_GROUP, cnt=1
+2022-04-26 16:25:22.300 [com.alibaba.nacos.naming.push.receiver] INFO  com.alibaba.nacos.client.naming - received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.237.1\",\"port\":9000,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"DEFAULT\",\"serviceName\":\"SC_GROUP_S@@sc-gateway-web-service\",\"ephemeral\":true}],\"dom\":\"SC_GROUP_S@@sc-gateway-web-service\",\"name\":\"SC_GROUP_S@@sc-gateway-web-service\",\"cacheMillis\":10000,\"lastRefTime\":1650961522295,\"checksum\":\"04b83f1171dc76d29f511f8bd76346b7\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"metadata\":{}}","lastRefTime":20098483794437} from /192.168.237.129
+2022-04-26 16:25:58.045 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 16:25:58.045 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Environment :null
+2022-04-26 16:25:58.046 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - initializer namespace from System Property :null
+2022-04-26 16:25:58.056 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - new ips(1) service: DEFAULT_GROUP@@seata-server@@default -> [{"instanceId":"192.168.237.129#8091#default#DEFAULT_GROUP@@seata-server","ip":"192.168.237.129","port":8091,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"default","serviceName":"DEFAULT_GROUP@@seata-server","metadata":{},"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:25:58.059 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: DEFAULT_GROUP@@seata-server@@default -> [{"instanceId":"192.168.237.129#8091#default#DEFAULT_GROUP@@seata-server","ip":"192.168.237.129","port":8091,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"default","serviceName":"DEFAULT_GROUP@@seata-server","metadata":{},"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:25:58.063 [timeoutChecker_1] INFO  com.alibaba.nacos.client.naming - [LISTENER] adding DEFAULT_GROUP@@seata-server with default to listener map
+2022-04-26 16:25:58.067 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.NettyClientChannelManager - will connect to 192.168.237.129:8091
+2022-04-26 16:25:58.073 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - NettyPool create channel to transactionRole:TMROLE,address:192.168.237.129:8091,msg:< RegisterTMRequest{applicationId='sc-gateway-web-service', transactionServiceGroup='my_test_tx_group'} >
+2022-04-26 16:25:58.242 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.NettyClientChannelManager - will connect to 192.168.237.129:8091
+2022-04-26 16:25:58.244 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - NettyPool create channel to transactionRole:RMROLE,address:192.168.237.129:8091,msg:< RegisterRMRequest{resourceIds='null', applicationId='sc-gateway-web-service', transactionServiceGroup='my_test_tx_group'} >
+2022-04-26 16:25:58.240 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.TmRpcClient - register TM success. server version:1.2.0,channel:[id: 0xe2f3fa3d, L:/192.168.237.1:55387 - R:/192.168.237.129:8091]
+2022-04-26 16:25:58.285 [timeoutChecker_1] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - register success, cost 174 ms, version:1.2.0,role:TMROLE,channel:[id: 0xe2f3fa3d, L:/192.168.237.1:55387 - R:/192.168.237.129:8091]
+2022-04-26 16:25:58.286 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.RmRpcClient - register RM success. server version:1.2.0,channel:[id: 0xe7f992c6, L:/192.168.237.1:55389 - R:/192.168.237.129:8091]
+2022-04-26 16:25:58.286 [timeoutChecker_2] INFO  io.seata.core.rpc.netty.NettyPoolableFactory - register success, cost 25 ms, version:1.2.0,role:RMROLE,channel:[id: 0xe7f992c6, L:/192.168.237.1:55389 - R:/192.168.237.129:8091]
+2022-04-26 16:26:44.577 [Nacso-Watch-Task-Scheduler-1] INFO  com.alibaba.nacos.client.naming - new ips(1) service: SC_GROUP_S@@auth-service -> [{"instanceId":"192.168.237.1#8200#DEFAULT#SC_GROUP_S@@auth-service","ip":"192.168.237.1","port":8200,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:26:44.580 [Nacso-Watch-Task-Scheduler-1] INFO  com.alibaba.nacos.client.naming - current ips:(1) service: SC_GROUP_S@@auth-service -> [{"instanceId":"192.168.237.1#8200#DEFAULT#SC_GROUP_S@@auth-service","ip":"192.168.237.1","port":8200,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:38:45.596 [SpringContextShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2022-04-26 16:38:45.597 [SpringContextShutdownHook] INFO  com.alibaba.nacos.client.naming - [BEAT] removing beat: SC_GROUP_S@@sc-gateway-web-service:192.168.237.1:9000 from beat map.
+2022-04-26 16:38:45.598 [SpringContextShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] 500926bd-3541-4fc0-976d-8a36102a7591 deregistering service SC_GROUP_S@@sc-gateway-web-service with instance: Instance{instanceId='null', ip='192.168.237.1', port=9000, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2022-04-26 16:38:45.602 [SpringContextShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2022-04-26 16:38:46.030 [com.alibaba.nacos.client.naming.updater] INFO  com.alibaba.nacos.client.naming - removed ips(1) service: SC_GROUP_S@@auth-service -> [{"instanceId":"192.168.237.1#8200#DEFAULT#SC_GROUP_S@@auth-service","ip":"192.168.237.1","port":8200,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@auth-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:38:46.033 [com.alibaba.nacos.client.naming.updater] INFO  com.alibaba.nacos.client.naming - current ips:(0) service: SC_GROUP_S@@auth-service -> []
+2022-04-26 16:38:46.603 [com.alibaba.nacos.naming.push.receiver] INFO  com.alibaba.nacos.client.naming - received push data: {"type":"dom","data":"{\"dom\":\"SC_GROUP_S@@sc-gateway-web-service\",\"name\":\"SC_GROUP_S@@sc-gateway-web-service\",\"cacheMillis\":10000,\"lastRefTime\":1650962326600,\"checksum\":\"708e5eed8eb6a1f89ef86cf6b178134e\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":20902789699331} from /192.168.237.129
+2022-04-26 16:38:46.604 [com.alibaba.nacos.naming.push.receiver] INFO  com.alibaba.nacos.client.naming - removed ips(1) service: SC_GROUP_S@@sc-gateway-web-service -> [{"instanceId":"192.168.237.1#9000#DEFAULT#SC_GROUP_S@@sc-gateway-web-service","ip":"192.168.237.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"SC_GROUP_S@@sc-gateway-web-service","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2022-04-26 16:38:46.607 [com.alibaba.nacos.naming.push.receiver] INFO  com.alibaba.nacos.client.naming - current ips:(0) service: SC_GROUP_S@@sc-gateway-web-service -> []
+2022-04-26 16:38:46.788 [com.alibaba.nacos.naming.push.receiver] INFO  com.alibaba.nacos.client.naming - received push data: {"type":"dom","data":"{\"dom\":\"SC_GROUP_S@@auth-service\",\"name\":\"SC_GROUP_S@@auth-service\",\"cacheMillis\":10000,\"lastRefTime\":1650962326786,\"checksum\":\"8478a9a1014f537bea51046d0e299fc5\",\"useSpecifiedURL\":false,\"clusters\":\"\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":20902975181687} from /192.168.237.129

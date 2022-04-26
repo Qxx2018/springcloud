@@ -61,9 +61,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                              */
                             @Override
                             public <O extends FilterSecurityInterceptor> O postProcess(O object) {
-                                //自定义 自定义权限拦截  加载访问时所需要的具体资源权限
+                                //自定义 自定义权限拦截  加载访问时所需要的具体资源权限（请求地址获取资源权限）
                                 object.setSecurityMetadataSource(customFilterInvocationSecurityMetadataSource);
-                                //自定义访问决策管理器
+                                //自定义访问决策管理器（登入用户的资源权限与请求地址获取资源权限比较，是否通过）
                                 object.setAccessDecisionManager(customAccessDecisionManager);
                                 return object;
                             }
