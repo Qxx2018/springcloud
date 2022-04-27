@@ -24,6 +24,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -57,33 +58,31 @@ public class SysAccountServiceImpl extends ServiceImpl<SysAccountMapper, SysAcco
     }
 
     /**
-     * loadUserByUsername在登录的时候会触发该方法
+     * findByUsername在登录的时候会触发该方法
+     * Find the {@link UserDetails} by username.
      * 根据用户名定位用户
-     * Locates the user based on the username. In the actual implementation, the search
-     * may possibly be case sensitive, or case insensitive depending on how the
-     * implementation instance is configured. In this case, the <code>UserDetails</code>
-     * object that comes back may have a username that is of a different case than what
-     * was actually requested..
-     *
-     * @param username the username identifying the user whose data is required.
-     * @return a fully populated user record (never <code>null</code>)
-     * @throws UsernameNotFoundException if the user could not be found or the user has no
-     *                                   GrantedAuthority
+     * @param username the username to look up
+     * @return the {@link UserDetails}. Cannot be null
      */
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public Mono<UserDetails> findByUsername(String username) {
 
-        AuthPermissionDo authPermissionDo = sysAuthService.authPermissionByUserName(username);
+        return Mono.fromCallable(
+                () -> {
+                    AuthPermissionDo authPermissionDo = sysAuthService.authPermissionByUserName(username);
 
-        SysAccountEntity accountEntity = authPermissionDo.getSysAccountEntity();
+                    SysAccountEntity accountEntity = authPermissionDo.getSysAccountEntity();
 
-        List<ResourceVo> resourceVos = authPermissionDo.getResourceVos();
+                    List<ResourceVo> resourceVos = authPermissionDo.getResourceVos();
 
-        List<GrantedAuthority> auths = resourceVos.stream().map(r -> new SimpleGrantedAuthority(r.getResourceCode()))
-                .collect(Collectors.toList());
+                    List<GrantedAuthority> auths = resourceVos.stream().map(r -> new SimpleGrantedAuthority(r.getResourceCode()))
+                            .collect(Collectors.toList());
 
-        accountEntity.setRoles(auths);
+                    accountEntity.setRoles(auths);
 
-        return accountEntity;
+                    return accountEntity;
+                }
+        );
     }
+
 }
