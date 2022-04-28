@@ -24,5 +24,10 @@ public class AuthConstants {
      */
     public static final String ROLE_LOGIN = "LOGIN";
 
+    /**
+     * 默认的登入地址
+     */
+    public static final String LOGIN_URL = "/login";
+
 
 }

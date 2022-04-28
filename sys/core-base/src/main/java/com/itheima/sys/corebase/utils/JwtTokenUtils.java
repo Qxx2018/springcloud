@@ -99,6 +99,6 @@ public class JwtTokenUtils {
         catch (JWTDecodeException e) {
             e.printStackTrace();
         }
-        return null;
+        return PayLoadDo.builder().build();
     }
 }

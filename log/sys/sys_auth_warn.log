@@ -9,3 +9,15 @@
 2022-04-27 17:48:56.255 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.itheima.sys.auth.mapper]' package. Please check your configuration.
 2022-04-27 17:49:06.395 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
 2022-04-27 17:49:06.406 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2022-04-27 18:21:24.583 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[sys-auth-config] & group[SC_GROUP_C]
+2022-04-27 18:21:24.594 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[sys-auth-config.yaml] & group[SC_GROUP_C]
+2022-04-27 18:21:24.612 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[sys-auth-config-dev.yaml] & group[SC_GROUP_C]
+2022-04-27 18:21:26.493 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysAccountMapper' and 'com.itheima.sys.auth.mapper.SysAccountMapper' mapperInterface. Bean already defined with the same name!
+2022-04-27 18:21:26.493 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysMenuMapper' and 'com.itheima.sys.auth.mapper.SysMenuMapper' mapperInterface. Bean already defined with the same name!
+2022-04-27 18:21:26.493 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysResourceMapper' and 'com.itheima.sys.auth.mapper.SysResourceMapper' mapperInterface. Bean already defined with the same name!
+2022-04-27 18:21:26.494 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.itheima.sys.auth.mapper.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+2022-04-27 18:21:26.494 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.itheima.sys.auth.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2022-04-27 18:21:26.494 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.itheima.sys.auth.mapper]' package. Please check your configuration.
+2022-04-27 18:21:35.432 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2022-04-27 18:21:35.440 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2022-04-27 18:24:35.491 [password-encoder-3] WARN  o.s.security.crypto.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt
