@@ -19,25 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec9dc766-711b-4d3c-bd83-0b9cd08c6690" name="Default Changelist" comment="auth-webflux:WebSecurityConfig">
-      <change afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/customfilter/JwtWebFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/manager/AuthManagerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/handler/AccessDeniedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/handler/LoginFailedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/handler/LoginSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/core-data/src/main/java/com/itheima/sys/coredata/dto/response/rsp/Rsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/core-data/src/main/java/com/itheima/sys/coredata/dto/response/rsp/RspCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_warn.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/service/SysAccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/service/SysAccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/service/impl/SysAccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/service/impl/SysAccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/core-base/src/main/java/com/itheima/sys/corebase/constants/AuthConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/core-base/src/main/java/com/itheima/sys/corebase/constants/AuthConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/core-base/src/main/java/com/itheima/sys/corebase/utils/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/core-base/src/main/java/com/itheima/sys/corebase/utils/JwtTokenUtils.java" afterDir="false" />
-    </list>
+    <list default="true" id="ec9dc766-711b-4d3c-bd83-0b9cd08c6690" name="Default Changelist" comment="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,6 +124,7 @@
       <workItem from="1650953498005" duration="10794000" />
       <workItem from="1651052092304" duration="2561000" />
       <workItem from="1651109767355" duration="18703000" />
+      <workItem from="1651143156946" duration="291000" />
     </task>
     <task id="LOCAL-00001" summary="网关webflux环境。">
       <created>1650962654598</created>
@@ -150,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650962654598</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）">
+      <created>1651143446933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651143446933</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="网关webflux环境。" />
-    <option name="LAST_COMMIT_MESSAGE" value="网关webflux环境。" />
+    <MESSAGE value="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1651142546053">
