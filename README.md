@@ -60,5 +60,6 @@ github 1044582360@qq.com 密码13WACB845qxx
         5、LoginSuccessHandler
             返回登入成功信息以及token
             
-    
+2022-04-29
+    springcloud-frame-base-v1.0【gateway-auth】    
     
