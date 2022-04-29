@@ -19,23 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec9dc766-711b-4d3c-bd83-0b9cd08c6690" name="Default Changelist" comment="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/manager/JwtSecurityContextRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/sys/sys_auth_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/sys/sys_auth_warn.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/log/sys/sys_auth_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/log/sys/sys_auth_debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/log/sys/sys_auth_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/log/sys/sys_auth_info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/log/sys/sys_auth_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/log/sys/sys_auth_warn.log" afterDir="false" />
+    <list default="true" id="ec9dc766-711b-4d3c-bd83-0b9cd08c6690" name="Default Changelist" comment="auth-webflux:完善WebSecurityConfig-&gt;SecurityWebFilterChain">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/customfilter/JwtWebFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/customfilter/JwtWebFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/manager/AuthManagerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/src/main/java/com/itheima/sys/auth/config/manager/AuthorizationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/auth/target/classes/com/itheima/sys/auth/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/core-base/target/classes/com/itheima/sys/corebase/constants/AuthConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/core-base/target/classes/com/itheima/sys/corebase/constants/AuthConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys/core-base/target/classes/com/itheima/sys/corebase/utils/JwtTokenUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/sys/core-base/target/classes/com/itheima/sys/corebase/utils/JwtTokenUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +146,7 @@
       <workItem from="1651052092304" duration="2561000" />
       <workItem from="1651109767355" duration="18703000" />
       <workItem from="1651143156946" duration="465000" />
-      <workItem from="1651199425946" duration="14730000" />
+      <workItem from="1651199425946" duration="17696000" />
     </task>
     <task id="LOCAL-00001" summary="网关webflux环境。">
       <created>1650962654598</created>
@@ -183,7 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651143533639</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="auth-webflux:完善WebSecurityConfig-&gt;SecurityWebFilterChain">
+      <created>1651221809677</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651221809677</updated>
+    </task>
+    <task id="LOCAL-00005" summary="auth-webflux:完善WebSecurityConfig-&gt;SecurityWebFilterChain">
+      <created>1651221826444</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651221826444</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,69 +236,70 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="网关webflux环境。" />
     <MESSAGE value="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth-webflux:jwt过滤器,无权访问时的提示Handler,登录失败的Handler,登录成功的Handler,权限校验AuthManagerHandler（是否有权访问url）（未写完）" />
+    <MESSAGE value="auth-webflux:完善WebSecurityConfig-&gt;SecurityWebFilterChain" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth-webflux:完善WebSecurityConfig-&gt;SecurityWebFilterChain" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1651211752591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1651211752591" />
-    <state x="-7" y="0" width="974" height="1047" key="DiffContextDialog" timestamp="1651215796274">
+    <state x="-7" y="0" width="974" height="1047" key="DiffContextDialog" timestamp="1651224487554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-7" y="0" width="974" height="1047" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1651215796274" />
+    <state x="-7" y="0" width="974" height="1047" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1651224487554" />
     <state x="1220" y="278" key="FileChooserDialogImpl" timestamp="1651131923558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1220" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1651131923558" />
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom" timestamp="1651220784272">
+    <state width="938" height="724" key="GridCell.Tab.0.bottom" timestamp="1651222202948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784272" />
-    <state width="1877" height="125" key="GridCell.Tab.0.center" timestamp="1651220784272">
+    <state width="938" height="724" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202948" />
+    <state width="938" height="724" key="GridCell.Tab.0.center" timestamp="1651222202948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784272" />
-    <state width="1877" height="125" key="GridCell.Tab.0.left" timestamp="1651220784272">
+    <state width="938" height="724" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202948" />
+    <state width="938" height="724" key="GridCell.Tab.0.left" timestamp="1651222202947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784272" />
-    <state width="1877" height="125" key="GridCell.Tab.0.right" timestamp="1651220784272">
+    <state width="938" height="724" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202947" />
+    <state width="938" height="724" key="GridCell.Tab.0.right" timestamp="1651222202948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784272" />
-    <state width="1877" height="125" key="GridCell.Tab.1.bottom" timestamp="1651220870786">
+    <state width="938" height="724" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202948" />
+    <state width="938" height="724" key="GridCell.Tab.1.bottom" timestamp="1651222202949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651220870786" />
-    <state width="1877" height="125" key="GridCell.Tab.1.center" timestamp="1651220870785">
+    <state width="938" height="724" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202949" />
+    <state width="938" height="724" key="GridCell.Tab.1.center" timestamp="1651222202948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651220870785" />
-    <state width="1877" height="125" key="GridCell.Tab.1.left" timestamp="1651220870784">
+    <state width="938" height="724" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202948" />
+    <state width="938" height="724" key="GridCell.Tab.1.left" timestamp="1651222202948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651220870784" />
-    <state width="1877" height="125" key="GridCell.Tab.1.right" timestamp="1651220870785">
+    <state width="938" height="724" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202948" />
+    <state width="938" height="724" key="GridCell.Tab.1.right" timestamp="1651222202948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651220870785" />
-    <state width="1877" height="125" key="GridCell.Tab.2.bottom" timestamp="1651220784092">
+    <state width="938" height="724" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202948" />
+    <state width="938" height="724" key="GridCell.Tab.2.bottom" timestamp="1651222202949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784092" />
-    <state width="1877" height="125" key="GridCell.Tab.2.center" timestamp="1651220784091">
+    <state width="938" height="724" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202949" />
+    <state width="938" height="724" key="GridCell.Tab.2.center" timestamp="1651222202949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784091" />
-    <state width="1877" height="125" key="GridCell.Tab.2.left" timestamp="1651220784091">
+    <state width="938" height="724" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202949" />
+    <state width="938" height="724" key="GridCell.Tab.2.left" timestamp="1651222202949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784091" />
-    <state width="1877" height="125" key="GridCell.Tab.2.right" timestamp="1651220784091">
+    <state width="938" height="724" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202949" />
+    <state width="938" height="724" key="GridCell.Tab.2.right" timestamp="1651222202949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651220784091" />
+    <state width="938" height="724" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651222202949" />
     <state x="709" y="221" key="RollbackChangesDialog" timestamp="1651143514529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,10 +308,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1650955221988" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1651143548569">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1651222191447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1651143548569" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1651222191447" />
     <state x="-7" y="0" width="974" height="1047" key="dock-window-1" timestamp="1651113391572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

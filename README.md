@@ -26,6 +26,39 @@ github 1044582360@qq.com 密码13WACB845qxx
 =============================================================================================================
 ====SpringSecurity - WebFlux环境下实现用户动态认证
 =============================================================================================================
-2022-03-17
+2022-03-17 
+    网关调整为webflux环境
+    auth服务调整为webflux环境
+=============================================================================================================
+====SpringSecurity - WebFlux环境下动态角色权限
+====SpringSecurity - WebFlux环境下整合JWT使用 Token 认证授权
+=============================================================================================================
+2022-04-29
+    权限资源配置WebSecurityConfig
+        1、安全过滤器链SecurityWebFilterChain
+            a.无需权限过滤的请求路径【一般配置白名单】
+            b.无需权限过滤的请求方式
+            c.指定请求的路径配置Auth鉴权管理器AuthorizationManager
+            d..anyExchange().access() 其他的鉴权管理器
+            e.添加JwtWebFilter
+            f.JwtSecurityContextRepository,解析JWT中用户信息，并授予角色权限信息
+            g.登录成功、失败处理;鉴权失败处理
+        2、AuthorizationManager  
+            a.获取请求方式->放行特定的比如HttpMethod.OPTIONS
+            b.获取请求地址->查询资源权限
+            c.用户角色所包含的资源权限中是否存在该请求地址所属的资源权限=>用户是否有访问该地址的权力
+        3、JwtWebFilter
+            a.是登录地址不进行JWT过滤
+            b.获取jwt-token  并验证token合法性
+        4、解析JWT中用户信息，并授予角色权限信息JwtSecurityContextRepository
+            a.从token中获取用户的账号密码以及权限资源
+                return new UsernamePasswordAuthenticationToken(
+                           authPermissionDo.getSysAccountEntity().getUsername(),
+                           authPermissionDo.getSysAccountEntity().getPassword(),
+                           authorityList
+                );
+        5、LoginSuccessHandler
+            返回登入成功信息以及token
+            
     
     

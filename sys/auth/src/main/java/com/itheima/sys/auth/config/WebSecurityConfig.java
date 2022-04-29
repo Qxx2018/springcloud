@@ -67,6 +67,7 @@ public class WebSecurityConfig {
         http.authorizeExchange()
                 //无需进行权限过滤的请求路径
                 .pathMatchers("/login").permitAll()
+                //无需权限过滤的请求方式
                 .pathMatchers(HttpMethod.OPTIONS).permitAll()
                 .pathMatchers("/**").access(authorizationManager)
                 .anyExchange().authenticated()
