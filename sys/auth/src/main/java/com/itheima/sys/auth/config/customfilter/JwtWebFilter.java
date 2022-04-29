@@ -17,6 +17,7 @@ import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
 
 
 /**
@@ -34,6 +35,7 @@ public class JwtWebFilter implements WebFilter {
      * 这里需要
      * 验证jwt-token合理性
      */
+    @Resource
     private SysAuthService sysAuthService;
 
     /**
@@ -68,7 +70,6 @@ public class JwtWebFilter implements WebFilter {
         if (!valid) {
             DataBuffer buffer = response.bufferFactory().wrap(JSONObject.toJSONString(Rsp.error(RspCode.BUSINESS_LOGIN_DISABLED)).getBytes());
         }
-        //验证token里的数据是否存在且在系统中有值
 
         return chain.filter(exchange);
 
